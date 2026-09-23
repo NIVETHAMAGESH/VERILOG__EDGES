@@ -2,6 +2,7 @@
 
 eg :Not alowed
 
+<<<<<<< HEAD
 &#x20;    
 
 &#x20;    module xxx();
@@ -17,6 +18,17 @@ eg :Not alowed
 &#x09;endmodule
 
 &#x20;    endmodule 
+=======
+ ```verilog
+module xxx();
+module yyy();
+
+--------------
+
+endmodule
+endmodule
+``` 
+>>>>>>> 411aa3b06fd4a9054529b7f1e058c1104dd8681e
 
 
 
@@ -287,7 +299,20 @@ type problems can be avoided
 
 
 
+<<<<<<< HEAD
+=======
+|Feature|                 always Block|forever Loop|
+|-|-|-|
+|Purpose<br />Control<br />Context<br />Scope|  <br />Describes a repeating hardware process   <br />  Triggered by events in a sensitivity list    <br />  Used in combinational or sequential logic  <br /> Ends when simulation ends or block is disabled    <br /> |Implements an infinite software  style loop<br />Executes continuously without a condition<br />Used for testbenches or signal generation<br />Runs infinitely unless manually terminated|
+>>>>>>> 411aa3b06fd4a9054529b7f1e058c1104dd8681e
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+######  
+>>>>>>> 411aa3b06fd4a9054529b7f1e058c1104dd8681e
 
