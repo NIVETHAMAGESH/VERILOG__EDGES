@@ -1,9 +1,3 @@
-# VLSI VERIFICATION LEARNINGS- BASED ON SYSTEM VERILOG AND UVM FROM SCRATCH 
-
-**Date:** 2026-09-23
-**Session Topic:** SystemVerilog Types (Enum, Struct, Typedef) and UVM Architecture Basics
-
----
 
 ## 1. Core Concepts & Learnings
 
@@ -39,7 +33,8 @@
 ## 2. Detailed Breakdown & Code Snippets
 
 ### A. Enumerated Types (enum)
-Enumerated types define a set of named values. They are heavily used in design for Finite State Machines (FSMs) and in testbenches for transaction opcodes or status flags.
+Enumerated types define a set of named values. 
+They are heavily used in design for Finite State Machines (FSMs) and in testbenches for transaction opcodes or status flags.
 
 **Example: Sequence Item Constraints**
 ```systemverilog
@@ -95,18 +90,3 @@ int_queue_t dynamic_q; // Declares a queue of integers
 *   **Scope Resolution Operator (::):** `typedef` declarations are static by default. When enclosed within a class, they must be referenced from outside the class using the scope resolution operator (e.g., `packet::color_e c1;`).
 *   **Forward Type Declaration:** When modeling UVM components, use `typedef class class_name;` to provide a forward declaration to the compiler, preventing circular dependency errors.
 
----
-
-## 3. General Best Practices Applied
-
-*   **Indentation & Structure:** Code is indented using 2 or 3 spaces (no tabs) and features exactly one statement or declaration per line to ease debugging.
-*   **UVM Packages:** Packages should be named with a `_pkg` post-fix and use a `.sv` extension. The `import` keyword is used to bring definitions into scope, while `` `include `` is strictly used for macro files (like `uvm_macros.svh`).
-*   **Message Handlers:** Always utilize `` `uvm_info ``, `` `uvm_warning ``, `` `uvm_error ``, and `` `uvm_fatal `` to automatically include file and line numbers in logs.
-
----
-
-## 4. Next Steps & Action Items
-*   [ ] Review Formal Property Verification (FPV) unreachable points.
-*   [ ] Add coverpoints for any function that was not thought of at the onset.
-*   [ ] Implement `$value$plusargs` for dynamic test control.
-*   [ ] Check that all `$cast()` and `randomize()` calls complete successfully using `if` statements rather than asserts.
